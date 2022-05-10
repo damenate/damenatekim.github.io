@@ -2,7 +2,73 @@
 <html lang="en">
 
 <head>
+<script>
+function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+}
 
+ var lastAnnotation = { page: 'nav=vehicles-insurance'};
+ function annotateUrl() {
+    var page = lastAnnotation;
+    return page;
+ };
+    
+    (function (apiKey) {
+        (function (p, e, n, d, o) {
+            var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = [];
+            v = ['initialize', 'identify', 'updateOptions', 'pageLoad']; for (w = 0, x = v.length; w < x; ++w)(function (m) {
+                o[m] = o[m] || function () { o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0))); };
+            })(v[w]);
+            y = e.createElement(n); y.async = !0; y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+            z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
+        })(window, document, 'script', 'pendo');
+          
+        // Call this whenever information about your visitors becomes available
+        // Please use Strings, Numbers, or Bools for value types.
+        pendo.initialize({
+            visitor: {
+                id: makeid(10),
+                email: makeid(5) + '@newemail.com',
+                role: "admin01"
+            },
+            account: {
+                id: makeid(15),
+                tier: "1",
+                version: "2.2"
+            },
+          annotateUrl: annotateUrl
+        });
+})('15adb158-bbf7-473f-4366-76dbbdd623ad');
+</script>
+<!-- <script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("Iw1m1dolhD5fIc2lHDpP2z2yrIrdlldA");
+  analytics.page();
+  }}();
+</script>
+<script>
+   analytics.identify("segmentUser1", {
+        name: "DaMe-Nate-Kim", 
+        email: "dnk@initech.com", 
+        group: "segmentwebhooktest",
+        plan_type: "Daily",
+        random_field: "Agent"
+   });
+      
+   analytics.group("segmentGroup1", {
+        name: "testname", 
+        industry: "TechNote",
+        employees: 450, 
+        plan: "enterprise"
+   });
+</script>-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
