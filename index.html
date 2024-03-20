@@ -29,22 +29,17 @@
     pendo.initialize({
           visitor: {
                 id:              <visitor-id-goes-here> // Required if user is logged in
-                // email:        // Recommended if using Pendo Feedback, or NPS Email
-                // full_name:    // Recommended if using Pendo Feedback
-                // role:         // Optional
+                  email: makeid(5) + '@newemail.com',
+            role: "admin01"
 
                 // You can add any additional visitor level key-values here,
                 // as long as it's not one of the above reserved names.
             },
 
             account: {
-                id:              <account-id-goes-here> // Highly recommended, required if using Pendo Feedback
-                // name:         // Optional
-                // is_paying:    // Recommended if using Pendo Feedback
-                // monthly_value:// Recommended if using Pendo Feedback
-                // planLevel:    // Optional
-                // planPrice:    // Optional
-                // creationDate: // Optional
+                 id: makeid(15),
+            tier: "1",
+            version: "2.2"
 
                 // You can add any additional account level key-values here,
                 // as long as it's not one of the above reserved names.
